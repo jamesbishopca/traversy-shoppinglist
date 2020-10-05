@@ -1,0 +1,20 @@
+{
+  "name": "traversy-shoppinglist",
+  "version": "1.0.0",
+  "description": "A shopping list app for learning Electron.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . traversy-shoppinglist --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Shopping List\"",    
+    "package-linux": "electron-packager . traversy-shoppinglist --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds"
+  },
+  "author": "James Bishop",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "electron": "^10.1.3"
+  },
+  "devDependencies": {
+    "electron-packager": "^15.1.0"
+  }
+}
